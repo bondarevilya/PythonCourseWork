@@ -1,0 +1,5 @@
+class UIState:
+    CREATE_NODES = 1
+    CREATE_EDGES = 2
+    SELECT_START = 3
+    SHOW_RESULT = 4
