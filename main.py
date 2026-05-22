@@ -51,6 +51,17 @@ def main():
 
         all_paths[target_node_id] = path_nodes
 
+    path_edges = set()
+
+
+    # convert paths [1 -> 2 -> 3] into edges (a,d), (b,c)
+    for path in all_paths.values():
+        for i in range(len(path) - 1):
+            a = path[i].node_id
+            b = path[i + 1].node_id
+
+            path_edges.add((a, b))
+
     # GAME LOOP
     running = True
     while running:
@@ -62,7 +73,16 @@ def main():
 
         # edges
         for edge in graph.edges:
-            renderer.draw_edge(edge, (255, 255, 255))
+
+            a = edge.start_node.node_id
+            b = edge.end_node.node_id
+
+            if (a, b) in path_edges:
+                color = (255, 0, 0)  # if in the final path
+            else:
+                color = (255, 255, 255)
+
+            renderer.draw_edge_with_weight(edge, color)
 
         # path
         for path in all_paths.values():
