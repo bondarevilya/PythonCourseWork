@@ -10,7 +10,7 @@ import pygame
 def main():
     pygame.init()
 
-    # SCREEN (ВОТ ЗДЕСЬ СОЗДАЁТСЯ)
+    # SCREEN Create
     screen = pygame.display.set_mode((1280, 720))
     pygame.display.set_caption("Dijkstra Visualizer")
 
@@ -19,13 +19,30 @@ def main():
     # GRAPH
     graph = Graph()
 
-    graph.add_node(Node(0, 100, 100))
-    graph.add_node(Node(1, 300, 100))
-    graph.add_node(Node(2, 500, 200))
+    graph.add_node(Node(0, 30, 325))
+    graph.add_node(Node(1, 225, 100))
+    graph.add_node(Node(2, 550, 100))
+    graph.add_node(Node(3, 775, 100))
+    graph.add_node(Node(4, 225, 550))
+    graph.add_node(Node(5, 550, 550))
+    graph.add_node(Node(6, 775, 550))
+    graph.add_node(Node(7, 550, 325))
+    graph.add_node(Node(8, 775, 325))
 
-    graph.add_edge(Edge(graph.nodes[0], graph.nodes[1], 5))
-    graph.add_edge(Edge(graph.nodes[1], graph.nodes[2], 3))
+    graph.add_edge(Edge(graph.nodes[0], graph.nodes[1], 6))
     graph.add_edge(Edge(graph.nodes[0], graph.nodes[2], 4))
+    graph.add_edge(Edge(graph.nodes[0], graph.nodes[4], 4))
+    graph.add_edge(Edge(graph.nodes[1], graph.nodes[2], 4))
+    graph.add_edge(Edge(graph.nodes[1], graph.nodes[7], 5))
+    graph.add_edge(Edge(graph.nodes[1], graph.nodes[4], 3))
+    graph.add_edge(Edge(graph.nodes[2], graph.nodes[3], 3))
+    graph.add_edge(Edge(graph.nodes[3], graph.nodes[8], 1))
+    graph.add_edge(Edge(graph.nodes[4], graph.nodes[7], 4))
+    graph.add_edge(Edge(graph.nodes[4], graph.nodes[5], 3))
+    graph.add_edge(Edge(graph.nodes[5], graph.nodes[6], 2))
+    graph.add_edge(Edge(graph.nodes[6], graph.nodes[8], 3))
+    graph.add_edge(Edge(graph.nodes[7], graph.nodes[3], 3))
+    graph.add_edge(Edge(graph.nodes[7], graph.nodes[6], 5))
 
     # RENDERER
     renderer = Renderer(screen)
@@ -83,10 +100,6 @@ def main():
                 color = (255, 255, 255)
 
             renderer.draw_edge_with_weight(edge, color)
-
-        # path
-        for path in all_paths.values():
-            renderer.draw_path(path, (255, 0, 0))
 
         #nodes
         for node in graph.nodes:

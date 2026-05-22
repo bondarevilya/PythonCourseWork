@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8753a3cc-fbff-4735-af08-0286be5f0d87" name="Changes" comment="done simple visual">
+    <list default="true" id="8753a3cc-fbff-4735-af08-0286be5f0d87" name="Changes" comment="Edge hage weight above them in window">
       <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
@@ -149,13 +149,22 @@
       <option name="project" value="LOCAL" />
       <updated>1779452832006</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Edge hage weight above them in window">
+      <option name="closed" value="true" />
+      <created>1779456170834</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1779456170834</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add skelet of ui" />
     <MESSAGE value="done draw_node and draw_edge methods in Class Render" />
     <MESSAGE value="done simple visual" />
-    <option name="LAST_COMMIT_MESSAGE" value="done simple visual" />
+    <MESSAGE value="Edge hage weight above them in window" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edge hage weight above them in window" />
   </component>
 </project>
