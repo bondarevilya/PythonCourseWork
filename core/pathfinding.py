@@ -20,9 +20,26 @@ class Pathfinder:
                 continue
 
             for v, w in adj[u]:
+
+                new_distace = dist[u] + w
+
                 if dist[u] + w < dist[v]:
-                    dist[v] = dist[u] + w
+                    dist[v] = new_distace
                     prev[v] = u
                     heapq.heappush(pq, (dist[v], v))
 
-        return dist
+        return dist, prev
+
+    @ staticmethod
+    def reconstruct_path(prev, target):
+        path = []
+
+        current = target
+
+        while current != -1:
+            path.append(current)
+            current = prev[current]
+
+        path.reverse()
+
+        return path

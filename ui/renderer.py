@@ -24,4 +24,18 @@ class Renderer:
         )
 
     def draw_path(self, nodes, color):
-        pass
+
+        if len(nodes) < 2:
+            return
+
+        for i in range(len(nodes) - 1):
+            start_node = nodes[i]
+            end_node = nodes[i + 1]
+
+            pygame.draw.line(
+                self.screen,
+                color,
+                (start_node.x, start_node.y),
+                (end_node.x, end_node.y),
+                6
+            )
