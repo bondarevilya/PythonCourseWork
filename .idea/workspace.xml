@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8753a3cc-fbff-4735-af08-0286be5f0d87" name="Changes" comment="Edge hage weight above them in window">
+    <list default="true" id="8753a3cc-fbff-4735-af08-0286be5f0d87" name="Changes" comment="Finish ui piece">
+      <change afterPath="$PROJECT_DIR$/controllers/app_controller.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/graph_controller.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ui/window.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/renderer.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/renderer.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +158,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779456170834</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Finish ui piece">
+      <option name="closed" value="true" />
+      <created>1779462091040</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1779462091041</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -165,6 +174,7 @@
     <MESSAGE value="done draw_node and draw_edge methods in Class Render" />
     <MESSAGE value="done simple visual" />
     <MESSAGE value="Edge hage weight above them in window" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edge hage weight above them in window" />
+    <MESSAGE value="Finish ui piece" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finish ui piece" />
   </component>
 </project>
