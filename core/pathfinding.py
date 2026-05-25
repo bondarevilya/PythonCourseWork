@@ -20,9 +20,7 @@ class Pathfinder:
                 continue
 
             for v, w in adj[u]:
-
                 new_distace = dist[u] + w
-
                 if dist[u] + w < dist[v]:
                     dist[v] = new_distace
                     prev[v] = u
@@ -33,7 +31,6 @@ class Pathfinder:
     @ staticmethod
     def reconstruct_path(prev, target):
         path = []
-
         current = target
 
         while current != -1:
@@ -41,5 +38,4 @@ class Pathfinder:
             current = prev[current]
 
         path.reverse()
-
         return path

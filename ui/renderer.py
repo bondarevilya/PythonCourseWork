@@ -17,9 +17,7 @@ class Renderer:
         )
 
         text = self.font.render(str(node.node_id), True, (0,0,0)) #CONST
-
         text_rect = text.get_rect(center=(node.x, node.y))
-
         self.screen.blit(text, text_rect)
 
     def draw_edge(self, edge: Edge, color):
