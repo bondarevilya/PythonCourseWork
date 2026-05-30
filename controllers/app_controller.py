@@ -26,6 +26,7 @@ class Appcontroller:
 
         elif self.state == UIState.SELECT_START:
             self.graph_controller.start_node = node
+            self.graph_controller.selected_node = node
 
     def handle_key(self, event):
         self.graph_controller.handle_key(event)
@@ -45,6 +46,10 @@ class Appcontroller:
         elif self.state == UIState.SELECT_START:
             self.state = UIState.SHOW_RESULT
             self.graph_controller.run_pathfinding()
+            print("STATE=", self.state)
+
+        elif self.state == UIState.SHOW_RESULT:
+            self.state = UIState.CREATE_NODES
             print("STATE=", self.state)
 
     def render(self, screen, renderer):
@@ -68,6 +73,8 @@ class Appcontroller:
         if self.graph_controller.waiting_for_weight:
             text = renderer.font.render(f"Weight: {self.graph_controller.weight_input}",
                                       True,
-                                      (255,255,255)
+                                      (140,140,140)
             )
-            screen.blit(text, (20, 20))
+            screen.blit(text, (250, 20))
+
+        renderer.draw_ui(screen, self.state, self.graph_controller.selected_node)

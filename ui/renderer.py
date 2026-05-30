@@ -1,5 +1,6 @@
 from core.node import Node
 from core.edge import Edge
+from ui.ui_state import UIState
 import math
 import pygame
 
@@ -81,5 +82,35 @@ class Renderer:
 
         text = self.font.render(str(edge.weight), True, color)
         self.screen.blit(text, (mid_x, mid_y))
+
+    def draw_ui(self, screen, state, selected_node):
+        font = self.font
+
+        if state == UIState.CREATE_NODES:
+            text = "Click to create nodes"
+        elif state == UIState.CREATE_EDGES:
+            text = "Click to create edges"
+        elif state == UIState.SELECT_START:
+            text = "Select start node"
+        elif state == UIState.SHOW_RESULT:
+            text = "Shortest path is shown. Press SPACE to create new graph"
+
+        else:
+            text = ""
+
+        ui_text = font.render(text, True,(255,255,255))
+        screen.blit(ui_text, (20, 20))
+
+        space_text = font.render("Press SPACE to continue", True,(0,200,30))
+        screen.blit(space_text, (20, 50))
+
+        if selected_node is not None:
+            node_text = font.render(
+                f"Selected node: {selected_node.node_id}",
+                True,(255, 200, 0)
+            )
+            screen.blit(node_text, (20,80))
+
+
 
 
